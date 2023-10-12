@@ -1,0 +1,388 @@
+/* ========================= Стили для страницы Инфоцентр =========================*/
+.infocenter-page{
+  padding-top: 210px;
+}
+/* ================================ Секция новостей ===============================*/
+.news-section{
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+.infocenter-title-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 30px;
+}
+.infocenter-title{
+  font-family: Inter-400, Tahoma, sans-serif;
+  font-weight: normal;
+  font-size: 72px;
+  line-height: 87px;
+  color: #202022;
+}
+.read-all{
+  font-family: Inter-400, Tahoma, sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #202022;
+}
+.read-all img, .read-more img{
+  margin-left: 10px;
+}
+/* ======================== Первая карточка новости/статьи ========================*/
+.last-block{
+  display: flex;
+  margin-bottom: 80px;
+}
+.last-left{
+  width: 734px;
+  height: 428px;
+  margin-right: 30px;
+  background-color: rgb(233, 255, 225);
+}
+.last-left .news-article-image{
+	width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.last-right{
+  max-width: 516px;
+  display: flex;
+  flex-direction: column;
+}
+.last-right p{
+  font-family: Inter-300, Tahoma, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 150%;
+  color: #484848;
+}
+.last-right-top{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 54px;
+}
+.news-article-author{
+  font-family: Inter-400, Tahoma, sans-serif !important;
+  font-weight: normal !important;
+  font-size: 14px;
+  line-height: 150%;
+  color: #202022 !important;
+}
+.last-date{
+  font-family: Inter-300, Tahoma, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 150%;
+  color: #484848;;
+}
+.news-article-title{
+  font-family: Inter-500, Tahoma, sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 44px;
+  color: #202022;
+  margin-bottom: 20px;
+}
+.last-block:hover .news-article-title, .last-block:hover .read-more{
+  color: #EAA515;
+}
+.read-more svg{
+	margin-left: 10px;
+}
+.read-more svg:last-child{
+	display: none;
+}
+.last-block:hover .read-more svg:last-child{
+	display: inline-block;
+}
+.last-block:hover .read-more svg:first-child{
+	display: none;
+}
+.read-more{
+  display: block;
+  text-align: end;
+  margin-top: auto;
+  font-family: Inter-400, Tahoma, sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #202022;
+}
+/* ================= Остальные карточки новостей/статей =========================*/
+.all-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.all-block{
+	width: 406px;
+	margin-right: 30px;
+	margin-bottom: 50px;
+}
+.all-block:nth-child(3), .all-block:nth-child(6), .all-block:nth-child(9){
+	margin-right: 0;
+}
+.all-block:nth-child(7), .all-block:nth-child(8), .all-block:nth-child(9){
+	margin-bottom:0;
+}
+.all-block img{
+  width: 100%;
+  height: 238px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  background-color: rgb(233, 255, 225);
+}
+.all-block-top{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.news-article-title-height{
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+.all-block:hover .news-article-title-height{
+  color: #EAA515;
+}
+/* Секция статей */
+.articles-section{
+  margin-bottom: 150px;
+}
+/* =============================== Адаптивные стили ============================== */
+/* ========================= Стили для max-width 1800======================== */
+@media (max-width: 1801px){
+	.all-block {
+		width: 31.4%;
+	}
+}
+/* ========================= Стили для max-width 1366px ========================== */
+@media (max-width: 1366px) {
+  /* ======================= Секция новостей (max-width 1366px) ===================*/
+  .infocenter-title{
+    font-size: 48px;
+    line-height: 58px;
+  }
+  /* ============== Первая карточка новости/статьи (max-width 1366px) =============*/
+  .last-block{
+    margin-bottom: 92px;
+  }
+  .last-left{
+    width: 621px;
+    height: 377px;
+  }
+  .last-right{
+    max-width: 435px;
+  }
+  .last-right-top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 42px;
+  }
+  .news-article-title{
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 16px;
+  }
+  /* ========= Остальные карточки новостей/статей (max-width 1366px) ============*/
+  .all-block{
+	width: 342px;
+	margin-bottom: 54px;
+  }
+  .all-block img{
+    height: 216px;
+  }
+  .news-article-title-height{
+    font-size: 18px;
+    line-height: 22px;
+	margin-bottom: 0;
+  }
+  /* ======================= Секция статей (max-width 1366px)==================== */
+  .articles-section{
+    margin-bottom: 124px;
+  }
+}
+/* ========================= Стили для max-width 1301px========================== */
+@media (max-width: 1301px){
+	.all-block {
+		width: 31.1%;
+	}
+}
+/* ========================= Стили для max-width 1001px========================== */
+@media (max-width: 1001px){
+	.all-block {
+		width: 31%;
+	}
+}
+/* ========================= Стили для max-width 992px =========================== */
+@media (max-width: 992px) {
+  .infocenter-page{
+    padding-top: 200px;
+  }
+  /* ====================== Секция новостей (max-width: 992px) ====================*/
+  .news-section{
+    margin-top: 50px;
+    margin-bottom: 80px;
+  }
+  .infocenter-title{
+    line-height: 62px;
+  }
+  /* ============ Первая карточка новости/статьи (max-width: 992px) ===============*/
+  .last-block{
+    margin-bottom: 40px;
+  }
+  .last-left{
+    width: 51%;
+    height: 209px;
+    margin-right: 20px;
+  }
+  .last-right{
+    max-width: 49%;
+  }
+  .last-right p{
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+      -moz-box-orient: vertical;
+    display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+    line-clamp: 4;
+    box-orient: vertical;
+  }
+  .last-right-top{
+    margin-bottom: 23px;
+  }
+  .news-article-author{
+    font-family: Inter-300, Tahoma, sans-serif !important;
+    font-weight: 300 !important;
+    font-size: 12px !important;
+    line-height: 150% !important;
+  }
+  .last-date{
+    font-size: 12px;
+  }
+  .news-article-title{
+    font-family: Inter-400, Tahoma, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 10px;
+  }
+  .read-more{
+    font-size: 16px;
+    line-height: 19px;
+  }
+  /* ========= Остальные карточки новостей/статей (max-width: 992px) =============*/
+	.all-block{
+		margin-right: 20px;
+		width: 48.5%;
+	}
+	.all-block:nth-child(2n){
+		margin-right: 0;
+	}
+	.all-block:not(:last-child){
+		margin-bottom: 40px;
+	}
+  .all-block img{
+    height: 216px;
+  }
+  .all-block-top{
+    margin-bottom: 13px;
+  }
+  .news-article-title-height{
+    font-size: 16px;
+    line-height: 19px;
+	margin-bottom: 0;
+  }
+  /* ======================= Секция статей (max-width: 992px======================*/
+  .articles-section{
+    margin-bottom: 100px;
+  }
+}
+/* ========================= Стили для max-width 768px =========================== */
+@media (max-width: 768px) {
+
+}
+/* ========================= Стили для max-width 728px =========================== */
+@media (max-width: 728px){
+	.all-block {
+		width: 48.1%;
+	}
+}
+/* ========================= Стили для max-width 576px =========================== */
+@media (max-width: 576px) {
+  .infocenter-page{
+    padding-top: 170px;
+  }
+  /* ====================== Секция новостей (max-width: 576px) ====================*/
+  .news-section{
+    margin-top: 30px;
+  }
+  .infocenter-title-wrapper{
+    margin-bottom: 17px;
+  }
+  .infocenter-title{
+    font-family: Inter-500, Tahoma, sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .read-all {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  /* ============ Первая карточка новости/статьи (max-width: 576px) ===============*/
+  .last-block{
+    margin-bottom: 30px;
+    flex-direction: column;
+  }
+  .last-left{
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .last-right{
+    max-width: 100%;
+  }
+  .last-right p{
+    display: none;;
+  }
+  .last-right-top{
+    margin-bottom: 8px;
+  }
+  .news-article-author{
+    display: block !important;
+  }
+  .news-article-title{
+    margin-bottom: 0;
+  }
+  .read-more{
+    display: none;
+  }
+  /* ========= Остальные карточки новостей/статей (max-width: 576px) =============*/
+  .all-wrapper{
+    display: block;
+  }
+	.all-block{
+		margin-right: 0;
+		width: 100%;
+	}
+  .all-block:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .all-block img{
+    height: 209px;
+    height: 209px;
+  }
+  .all-block-top{
+    margin-bottom: 8px;
+  }
+  /* ====================== Секция статей (max-width: 576px) ====================== */
+  .articles-section{
+    margin-bottom: 90px;
+  }
+}

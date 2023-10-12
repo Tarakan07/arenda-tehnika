@@ -1,0 +1,43 @@
+.map {
+	padding: 15rem 0 1rem 0;
+}
+
+.simple-sitemap-container {
+	max-width: 73.75rem;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.simple-sitemap-container .post-type {
+	padding-bottom: 1.5rem;
+}
+
+.map a {
+	color: #999999;
+	font-size: 14px;
+	transition: all 0.2s ease;
+	position: relative;
+	display: inline-block;
+}
+
+.map a:hover {
+	color: #fdb600;
+}
+
+.map a::before {
+	content: "";
+	position: absolute;
+	left: -20px;
+	top: 7px;
+	display: block;
+	width: 5px;
+	height: 5px;
+	background-color: #fdb600;
+	border-radius: 20px;
+}
+
+@media screen and (max-width: 480px) {
+	.map .simple-sitemap-container ul {
+		margin: 0 0 0 2.2em;
+	}
+}

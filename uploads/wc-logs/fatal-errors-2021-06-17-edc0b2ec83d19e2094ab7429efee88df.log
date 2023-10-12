@@ -1,0 +1,4 @@
+2021-06-17T14:26:43+00:00 CRITICAL Cannot use isset() on the result of an expression (you can use "null !== expression" instead) в /home/t/test1144/test1144.beget.tech/public_html/wp-content/themes/UM/functions.php на строке 221
+
+2021-06-17T14:27:13+00:00 CRITICAL syntax error, unexpected ':' в /home/t/test1144/test1144.beget.tech/public_html/wp-content/themes/UM/functions.php на строке 221
+

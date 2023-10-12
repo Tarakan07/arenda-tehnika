@@ -1,0 +1,91 @@
+RewriteEngine On
+RewriteBase /
+
+### убираем www ###
+RewriteCond %{HTTP_HOST} ^www.arenda-tehnika\.by$ [NC]
+RewriteRule ^(.*)$ https://arenda-tehnika.by/$1 [R=301,L]
+
+# RewriteCond expr "tolower(%{REQUEST_URI}) =~ /(.+)/"
+# RewriteRule [A-Z] %1 [R=301,L]
+RewriteCond %{HTTPS} off
+RewriteCond %{REQUEST_URI} !(wp-json)
+RewriteCond expr "tolower(%{REQUEST_URI}) =~ /(.+)/"
+RewriteRule [A-Z] https://%{HTTP_HOST}%1 [R=301,L]
+
+
+### Добавляем слеш(/), если его нет, и это не файл #### 
+RewriteCond %{REQUEST_URI} !(/$|\.|wp-json)
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI}/ [R=301,L]
+
+#### Убираем повторяющиеся слеши (/) в URL ####
+RewriteCond %{THE_REQUEST} //
+# RewriteRule .* /$0 [R=301,L]
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+####Редиректы для пустых страниц ####
+
+RewriteEngine On 
+RewriteBase /
+
+RewriteRule /category/soncrete-pump-2-in-1/  https://arenda-tehnika.by/arenda-spectehniki/ [R=301,L]
+RewriteCond %{QUERY_STRING} ^soncrete-pump-2-in-1$ 
+RewriteCond %{QUERY_STRING} ^concrete-pump-21-m$ 
+RewriteCond %{QUERY_STRING} ^concrete-pump-37-m$ 
+RewriteCond %{QUERY_STRING} ^concrete-pump-42-m$ 
+RewriteCond %{QUERY_STRING} ^concrete-pump-52-m$ 
+RewriteCond %{QUERY_STRING} ^concrete-pump-60-m$ 
+RewriteCond %{QUERY_STRING} ^aerial-platforms$ 
+RewriteCond %{QUERY_STRING} ^aerial-platform-12-m$ 
+RewriteCond %{QUERY_STRING} ^aerial-platform-18-m$ 
+RewriteCond %{QUERY_STRING} ^aerial-platform-22-m$ 
+RewriteCond %{QUERY_STRING} ^aerial-platform-28-m$ 
+RewriteCond %{QUERY_STRING} ^aerial-platform-30-m$ 
+RewriteCond %{QUERY_STRING} ^aerial-platform-32-m$ 
+RewriteCond %{QUERY_STRING} ^aerial-platform-45-m$ 
+RewriteCond %{QUERY_STRING} ^aerial-platform-52-m$ 
+RewriteCond %{QUERY_STRING} ^aerial-platform-60-m$ 
+RewriteCond %{QUERY_STRING} ^drilling-technics$ 
+RewriteCond %{QUERY_STRING} ^hydraulic-manipulators$ 
+RewriteRule ^(.*)$ https://arenda-tehnika.by/arenda-spectehniki/ [R=301,L] 
+
+RewriteCond %{QUERY_STRING} ^truck-crane-25-t$ 
+RewriteCond %{QUERY_STRING} ^truck-crane-32-t$ 
+RewriteCond %{QUERY_STRING} ^truck-crane-40-t$ 
+RewriteCond %{QUERY_STRING} ^truck-crane-50-t$ 
+RewriteCond %{QUERY_STRING} ^truck-crane-60-t$ 
+RewriteCond %{QUERY_STRING} ^truck-crane-90-t$ 
+RewriteRule ^(.*)$ https://arenda-tehnika.by/category/truck-cranes/ [R=301,L]
+
+RewriteCond %{QUERY_STRING} ^loader-based-hydraulic-hammer$ 
+RewriteCond %{QUERY_STRING} ^manual-hydraulic-hammer$ 
+RewriteRule ^(.*)$ https://arenda-tehnika.by/category/hydraulic-hammers/ [R=301,L]
+
+RewriteCond %{QUERY_STRING} ^chain-excavator$ 
+RewriteCond %{QUERY_STRING} ^excavator-planner$ 
+RewriteRule ^(.*)$ https://arenda-tehnika.by/category/excavators/ [R=301,L]
+
+
+# BEGIN WordPress
+# Директивы (строки) между `BEGIN WordPress` и `END WordPress`
+# созданы автоматически и подлежат изменению только через фильтры WordPress.
+# Сделанные вручную изменения между этими маркерами будут перезаписаны.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+
+# BEGIN ShortPixelWebp
+# Директивы (строки) между `BEGIN ShortPixelWebp` и `END ShortPixelWebp`
+# созданы автоматически и подлежат изменению только через фильтры WordPress.
+# Сделанные вручную изменения между этими маркерами будут перезаписаны.
+
+# END ShortPixelWebp
